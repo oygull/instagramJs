@@ -58,7 +58,7 @@ let posts = [
   {
     id:7,
     mediaUrl: ['videos/data.mp4'],
-    desc: "My favorite Snapchat filter 💕",
+    desc: "My first video is now available on my app, watch full video by clicking the link my bio and download the app.",
     like: 123712,
     comment: 2341,
     save: false,
@@ -82,6 +82,33 @@ let posts = [
     save: false,
     type: "imgs"
   },
+  {
+    id:10,
+    mediaUrl: ['images/post7.png'],
+    desc: "Ready for a gulf cart ride🛺 I am the DJ! What is your favorite song right now?",
+    like: 12322,
+    comment: 1251,
+    save: false,
+    type: "postImg"
+  },
+  {
+    id:11,
+    mediaUrl: ['images/post8.1.png','images/post8.2.png','images/post8.3.png'],
+    desc: "Call me slime master! 😆",
+    like: 35347,
+    comment: 1221,
+    save: false,
+    type: "imgs"
+  },
+  {
+    id:7,
+    mediaUrl: ['videos/video3.mp4'],
+    desc: "My favorite Snapchat filter 💕",
+    like: 123712,
+    comment: 2341,
+    save: false,
+    type: "video"
+  }
 ];
 
 let postsList = document.getElementById('postsList');
@@ -179,7 +206,7 @@ function openModal(id){
                <button class="footer-btn comment-footer-btn"><i class='bx bx-message-rounded' ></i></button>
                <button class="footer-btn send-footer-btn"><i class='bx bx-send' ></i></button>
              </div>
-             <button class="footer-btn footer-save-btn"><i class='bx bx-bookmark' ></i></button>
+             <button onclick="savePost(${item.id})" id="savePostBtn" class="footer-btn footer-save-btn"><i class='bx bx-bookmark' ></i></button>
            </div>
           <p class="footer-liked">Liked by <span>${item.like}</span></p>
            <form class="footer__form">
@@ -226,7 +253,7 @@ function openModal(id){
                <button class="footer-btn comment-footer-btn"><i class='bx bx-message-rounded' ></i></button>
                <button class="footer-btn send-footer-btn"><i class='bx bx-send' ></i></button>
              </div>
-             <button class="footer-btn footer-save-btn"><i class='bx bx-bookmark' ></i></button>
+             <button onclick="savePost(${item.id})" id="savePostBtn" class="footer-btn footer-save-btn"><i class='bx bx-bookmark' ></i></button>
            </div>
           <p class="footer-liked">Viewed by <span>${item.like}</span></p>
            <form class="footer__form">
@@ -279,7 +306,7 @@ function openModal(id){
                <button class="footer-btn comment-footer-btn"><i class='bx bx-message-rounded' ></i></button>
                <button class="footer-btn send-footer-btn"><i class='bx bx-send' ></i></button>
              </div>
-             <button class="footer-btn footer-save-btn"><i class='bx bx-bookmark' ></i></button>
+             <button onclick="savePost(${item.id})" id="savePostBtn" class="footer-btn footer-save-btn"><i class='bx bx-bookmark' ></i></button>
            </div>
           <p class="footer-liked">Liked by <span>${item.like}</span></p>
            <form class="footer__form">
@@ -322,4 +349,22 @@ function nextSlide(){
 }
 function prevSlide(){
   mySlides(index += 1);
+}
+
+let savedList = document.getElementById('savedList');
+
+function savePost(id){
+let savePostBtn = document.getElementById('savePostBtn');
+savePostBtn.innerHTML= `<i class='bx bxs-bookmark' ></i>`
+  posts.forEach((item)=>{
+  
+    if(item.id==id){
+      savedList.innerHTML='';
+      item.save=true;
+   let filtered= posts.filter((el)=>{
+      return el.save==true
+    })
+    showPosts(savedList,filtered);
+    }
+  })
 }

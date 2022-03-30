@@ -323,9 +323,7 @@ video{
 .prev-slide{
   left: 10px;
 }
-.user{
-  margin-bottom: 16px;
-}
+
 .user__box{
   display: flex;
   align-items: center;

@@ -9,5 +9,142 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: rgb(133, 128, 128);
+}
+.container{
+  width: 70%;
+  margin: 0 auto;
+}
+ul{
+  list-style-type: none;
+}
+img{
+  max-width: 100%;
+}
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.header__btns{
+  display: flex;
+}
+.header__logo{
+  width: 100px;
+  height: 30px;
+}
+.header__btn{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  margin-right: 10px;
+}
+.header__btn .bx{
+  font-size: 24px;
+}
+.header__form{
+  background: rgba(var(--bb2,239,239,239),1);
+  font-size: 16px;
+  padding: 0 16px;
+  border-radius: 10px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+.header__input{
+  background-color: transparent;
+  border: none;
+  padding: 0 6px;
+  outline: none;
+}
+.span-search{
+  display: flex;
+  align-items: center;
+}
+.btn-user{
+  background-color: gold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+.posts__item{
+  height: 290px;
+  position: relative;
+}
+.item__inner{
+  position: relative;
+  padding: 15px 10px;
+  height: 290px;
+}
+
+.posts__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box__inner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+.count__post{
+  display: flex;
+  align-items: center;
+  margin: 6px 12px;
+}
+.count__post .bx{
+  margin-right: 6px;
+}
+.type-btn-box{
+  position: absolute;
+  top: 6%;
+  right: 12%;
+}
+.type-btn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.type-btn .bx{
+  font-size: 28px;
+  color: #fff;
+}
+.header__logobox{
+  margin-left: 26px;
+}
+.box__inner{
+  background-color: rgba(0, 0, 0, 0.555);
+  width: 92%;
+  height: 100%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+video{
+  width: 100%;
+  height: 100%;
+}
+.posts__item:hover .box__inner{
+  display: flex;
+}
+.modal-body{
+  height: 90vh;
+  padding: 0 !important;
+  overflow: hidden;
+}
+.modal-img{
+  width: 100%;
+  height: 100%;
+}
+.modal__header{
+  display: flex;
 }

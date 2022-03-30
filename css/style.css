@@ -37,12 +37,13 @@ img{
 }
 .header__btn{
   cursor: pointer;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   background-color: transparent;
   border: none;
   margin-right: 10px;
 }
+
 .header__btn .bx{
   font-size: 24px;
 }
@@ -61,15 +62,26 @@ img{
   padding: 0 6px;
   outline: none;
 }
+.header__input::placeholder{
+  color: #8e8e8e;
+}
 .span-search{
   display: flex;
   align-items: center;
+  color: #8e8e8e;
 }
 .btn-user{
   background-color: gold;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+}
+.myself{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #000;
 }
 .posts__item{
   height: 290px;
@@ -177,7 +189,7 @@ video{
 }
 .user__name{
   margin-bottom: 0;
-  color: rgba(var(--f75,38,38,38),1);
+  color: #262626;
   font-size: 14px;
   font-weight: 600;
   margin-right: 20px;
@@ -191,7 +203,7 @@ video{
 .header__text{
   font-size: 14px;
   line-height: 18px;
-  color: rgba(var(--f75,38,38,38),1);
+  color: #262626;
   font-weight: 600;
   margin-bottom: 0;
 }
@@ -237,7 +249,7 @@ video{
   color: #1b1b1b;
 }
 .footer-liked{
-  color: rgba(var(--i1d,38,38,38),1);
+  color: #262626;
   font-size: 14px;
   line-height: 18px;
   padding: 6px 20px;
@@ -310,4 +322,109 @@ video{
 }
 .prev-slide{
   left: 10px;
+}
+.user{
+  margin-bottom: 16px;
+}
+.user__box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.user__box img{
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  outline: 3px solid rgb(255, 81, 0);
+  cursor: pointer;
+}
+.user__inner{
+  padding: 30px 0;
+}
+.user__name-info{
+  color: #262626;
+  font-size: 28px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  margin-right: 40px;
+}
+.user__name-info .bx{
+  color: #3797f0;
+  margin-left: 10px;
+}
+.info__top{
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.user-top-btn{
+  cursor: pointer;
+  height: 30px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  background-color: #3797f0;
+  color: #fff;
+  border-radius: 3px;
+  border: 0;
+}
+.follow-btn{
+  padding: 0 24px;
+  margin-right: 10px;
+  letter-spacing: 1px;
+}
+.usercheck-btn{
+  padding: 0 8px;
+  margin-right: 16px;
+  font-size: 20px;
+}
+.dots-btn{
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+}
+.indicators{
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+.indicators__text{
+  color: #262626;
+  line-height: 24px;
+  margin-right: 24px;
+}
+.indicators__text span{
+  font-weight: 600;
+}
+.about__title{
+  font-weight: 600;
+  color: #1b1b1b;
+  letter-spacing: 1px;
+}
+.about__desc a{
+  text-decoration: none;
+  color: #3797f0;
+}
+.posts__inner{
+  padding: 10px 60px;
+}
+.nav-tabs{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.nav-link{
+  color: #8e8e8e;
+  text-transform: uppercase;
+  padding: 12px 32px;
+}
+.nav-link.active{
+  color: #1b1b1b;
+  border: none;
+  border-bottom: 1px solid #1b1b1b !important;
 }

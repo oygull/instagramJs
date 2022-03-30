@@ -32,16 +32,64 @@
         <button class="header__btn btn-plus"><i class='bx bx-plus-circle' ></i></button>
         <button class="header__btn btn-compass"><i class='bx bx-compass' ></i></button>
         <button class="header__btn btn-like"><i class='bx bx-heart' ></i></button>
-        <button class="header__btn btn-user"></button>
+        <button class="header__btn btn-user"><img class="myself" src="images/myself.jpg" alt="myself"></button>
       </div>
      </div>
    </div>
  </header>
 
+ <div class="user">
+   <div class="container">
+     <div class="user__inner row">
+      <div class="user__box col-md-4">
+        <img src="images/user.png" alt="user">
+      </div>
+      <div class="user__info col-md-8">
+        <div class="info__top">
+          <p class="user__name-info">elle <i class='bx bxs-badge-check'></i></p>
+          <button class="user-top-btn follow-btn">Follow</button>
+          <button class="user-top-btn usercheck-btn"><i class='bx bx-chevron-down' ></i></button>
+          <button class="dots-btn"><i class='bx bx-dots-horizontal-rounded' ></i></button>
+        </div>
+        <div class="indicators">
+          <p class="indicators__text"> <span>145</span> posts</p>
+          <p class="indicators__text"> <span>4.4m</span> followers </p>
+          <p class="indicators__text"> <span>6</span> folowwing</p>
+        </div>
+        <div class="about">
+          <p class="about__title">Elle Lively McBroom</p>
+          <p class="about__desc">Hi, my name is Elle and I’m 5 years old! My account is ran by my Mommy <a href="#">@catherinemcbroom</a> & Daddy <a href="#"> @austinmcbroom</a></p>
+        </div>
+      </div>
+     </div>
+   </div>
+ </div>
  <section  class="posts">
    <div class="container">
-    <ul id="postsList" class="posts__list row"></ul>
+     <div class="posts__inner">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><i class='bx bx-grid' ></i> Posts </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><i class='bx bx-video' ></i> Videos</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><i class='bx bx-bookmark' ></i> Saved</button>
+        </li>
+      </ul>
+     </div>
    </div>
+
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="container">
+        <ul id="postsList" class="posts__list row"></ul>
+       </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+  </div>
  </section>
 
 

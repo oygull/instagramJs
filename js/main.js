@@ -2,7 +2,7 @@ let posts = [
   {
     id:1,
     mediaUrl: ['images/post1.png'],
-    desc: "Its almost Halloween!! 🎃👻✨",
+    desc: "If happiness was a person 🤣💞",
     like: 23445,
     comment: 5321,
     save: false,
@@ -301,8 +301,6 @@ function openModal(id){
 
 let elSliderItem = document.getElementsByClassName("imgbox");
 let index = 1;
-mySlides();
-
 
 function mySlides() {
   if (index > elSliderItem.length){

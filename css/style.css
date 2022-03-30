@@ -426,3 +426,17 @@ video{
   border: none;
   border-bottom: 1px solid #1b1b1b !important;
 }
+@media screen and (max-width:700px) {
+  .header__btns{
+    display: none;
+  }
+  .container{
+    width: 95%;
+  }
+  .user__box{
+    margin-bottom: 20px;
+  }
+  .header__logo{
+   display: none;
+  }
+}

@@ -101,7 +101,7 @@ let posts = [
     type: "imgs"
   },
   {
-    id:7,
+    id:12,
     mediaUrl: ['videos/video3.mp4'],
     desc: "My favorite Snapchat filter 💕",
     like: 123712,

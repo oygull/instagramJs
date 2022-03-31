@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 *,
 *::after,
 *::before {
@@ -75,6 +75,7 @@ img{
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  margin-top: 6px;
 }
 .myself{
   width: 30px;
@@ -326,7 +327,6 @@ video{
 
 .user__box{
   display: flex;
-  align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -439,4 +439,59 @@ video{
   .header__logo{
    display: none;
   }
+}
+.stories__list{
+  display: flex;
+}
+.stories__item{
+ margin: 10px 20px;
+ width: 100px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.story-img{
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  border: 2px solid transparent;
+  outline: 2px solid rgb(175, 175, 175);
+}
+.story__text{
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+}
+.modal-content-header{
+  width: 400px !important;
+  border-radius: 10px;
+}
+.header-modal{
+  width: 400px !important;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+.header__modal-item{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  font-weight: 600;
+  border: 0.5px solid #d8d8d8;
+}
+.header__modal-item:not(:last-child){
+  color: #ed4956;
+}
+.dark-color{
+  color: #000;
+}
+.footer-save-btn{
+  color: #cacaca;
 }

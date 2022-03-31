@@ -111,7 +111,6 @@ let posts = [
   }
 ];
 
-let postsList = document.getElementById('postsList');
 
 
 function showPosts(wrapper,arr){
@@ -127,7 +126,7 @@ function showPosts(wrapper,arr){
         <p class="count__post"><i class='bx bxs-comment-dots'></i>${item.comment}</p>
       </div>
      <div class="type-btn-box">
-       <button id="typeBtn" class="type-btn"><i class='bx bx-play' ></i></button>
+       <button id="typeBtn" class="type-btn"><img src="images/play.svg" alt="play"></button>
      </div>
      </div>
       `;
@@ -141,7 +140,7 @@ function showPosts(wrapper,arr){
         <p class="count__post"><i class='bx bxs-comment-dots'></i>${item.comment}</p>
       </div>
      <div class="type-btn-box">
-       <button id="typeBtn" class="type-btn"><i class='bx bx-trim'></i></button>
+       <button id="typeBtn" class="type-btn"><img src="images/carousel.svg" alt="carousel"></button>
      </div>
      </div>
       `;
@@ -171,7 +170,9 @@ let modalContainer = document.getElementById('modalContainer')
 function openModal(id){
   let modalContent = document.createElement('div');
   modalContainer.innerHTML ='';
+
   posts.forEach((item)=>{
+
     if(item.id==id){
       if(item.type=='postImg'){
         modalContent.innerHTML = `
@@ -202,16 +203,16 @@ function openModal(id){
          <div class="modal__footer">
            <div class="footer__inner">
              <div class="footer-btns">
-               <button class="footer-btn like-footer-btn"><i class='bx bx-heart' ></i></button>
-               <button class="footer-btn comment-footer-btn"><i class='bx bx-message-rounded' ></i></button>
-               <button class="footer-btn send-footer-btn"><i class='bx bx-send' ></i></button>
+               <button class="footer-btn like-footer-btn"><img src="images/like2.svg" alt="direct"></button>
+               <button class="footer-btn comment-footer-btn"><img src="images/direct.svg" alt="direct"></button>
+               <button class="footer-btn send-footer-btn"><img src="images/save.svg" alt="save"></button>
              </div>
-             <button onclick="savePost(${item.id})" id="savePostBtn" class="footer-btn footer-save-btn"><i class='bx bx-bookmark' ></i></button>
+             <button onclick="savePost(${item.id})" id="savePostBtn" class="footer-btn footer-save-btn"><img src="images/savespost.svg" alt="savespost"></button>
            </div>
           <p class="footer-liked">Liked by <span>${item.like}</span></p>
            <form class="footer__form">
              <div class="footer__form-box">
-               <button class="footer-btn smile-btn"><i class='bx bx-smile' ></i></button>
+               <button class="footer-btn smile-btn"> <img src="images/emoji.svg" alt="emoji"></button>
                <input class="footer__input" type="text" placeholder="Add a comment...">
              </div>
              <button type="submit" class="footer-modal-btn">Post</button>
@@ -249,16 +250,16 @@ function openModal(id){
          <div class="modal__footer">
            <div class="footer__inner">
              <div class="footer-btns">
-               <button class="footer-btn like-footer-btn"><i class='bx bx-heart' ></i></button>
-               <button class="footer-btn comment-footer-btn"><i class='bx bx-message-rounded' ></i></button>
-               <button class="footer-btn send-footer-btn"><i class='bx bx-send' ></i></button>
+               <button class="footer-btn like-footer-btn"><img src="images/like2.svg" alt="direct"></button>
+               <button class="footer-btn comment-footer-btn"><img src="images/direct.svg" alt="direct"></button>
+               <button class="footer-btn send-footer-btn"><img src="images/save.svg" alt="save"></button>
              </div>
-             <button onclick="savePost(${item.id})" id="savePostBtn" class="footer-btn footer-save-btn"><i class='bx bx-bookmark' ></i></button>
+             <button onclick="savePost(${item.id})" id="savePostBtn" class="footer-btn footer-save-btn"><img src="images/savespost.svg" alt="savespost"></button>
            </div>
           <p class="footer-liked">Viewed by <span>${item.like}</span></p>
            <form class="footer__form">
              <div class="footer__form-box">
-               <button class="footer-btn smile-btn"><i class='bx bx-smile' ></i></button>
+               <button class="footer-btn smile-btn"> <img src="images/emoji.svg" alt="emoji"></button>
                <input class="footer__input" type="text" placeholder="Add a comment...">
              </div>
              <button type="submit" class="footer-modal-btn">Post</button>
@@ -301,70 +302,82 @@ function openModal(id){
           </div>
          <div class="modal__footer">
            <div class="footer__inner">
-             <div class="footer-btns">
-               <button class="footer-btn like-footer-btn"><i class='bx bx-heart' ></i></button>
-               <button class="footer-btn comment-footer-btn"><i class='bx bx-message-rounded' ></i></button>
-               <button class="footer-btn send-footer-btn"><i class='bx bx-send' ></i></button>
-             </div>
-             <button onclick="savePost(${item.id})" id="savePostBtn" class="footer-btn footer-save-btn"><i class='bx bx-bookmark' ></i></button>
+           <div class="footer-btns">
+           <button class="footer-btn like-footer-btn"><img src="images/like2.svg" alt="direct"></button>
+           <button class="footer-btn comment-footer-btn"><img src="images/direct.svg" alt="direct"></button>
+           <button class="footer-btn send-footer-btn"><img src="images/save.svg" alt="save"></button>
            </div>
-          <p class="footer-liked">Liked by <span>${item.like}</span></p>
+           <button onclick="savePost(${item.id})" id="savePostBtn" class="footer-btn footer-save-btn"> <img src="images/savespost.svg" alt="savespost"></button>
+           </div>
+           <p class="footer-liked">Liked by <span>${item.like}</span></p>
            <form class="footer__form">
-             <div class="footer__form-box">
-               <button class="footer-btn smile-btn"><i class='bx bx-smile' ></i></button>
-               <input class="footer__input" type="text" placeholder="Add a comment...">
-             </div>
-             <button type="submit" class="footer-modal-btn">Post</button>
+           <div class="footer__form-box">
+           <button class="footer-btn smile-btn"> <img src="images/emoji.svg" alt="emoji"></button>
+           <input class="footer__input" type="text" placeholder="Add a comment...">
+           </div>
+           <button type="submit" class="footer-modal-btn">Post</button>
            </form>
-         </div>
-        </div>
-        `;
+           </div>
+           </div>
+           `;
+          }
+          modalContent.classList="modal-body row";
+          modalContainer.appendChild(modalContent);
+        }
+      })
+
+    }
+
+    let elSliderItem = document.getElementsByClassName("imgbox");
+    let index = 1;
+    
+    function mySlides() {
+      if (index > elSliderItem.length){
+        index = 1
+      }    
+      if (index < 1) {
+        index = elSliderItem.length
       }
-      modalContent.classList="modal-body row";
-      modalContainer.appendChild(modalContent);
+      for (i = 0; i < elSliderItem.length; i++) {
+        elSliderItem[i].style.display = "none";  
+      }
+      elSliderItem[index-1].style.display = "block"; 
+    }   
+    
+    function nextSlide(){
+      mySlides(index -= 1);
     }
-  })
-}
+    function prevSlide(){
+      mySlides(index += 1);
+    }
+    
+    let savedList = document.getElementById('savedList');
+    
 
-let elSliderItem = document.getElementsByClassName("imgbox");
-let index = 1;
-
-function mySlides() {
-  if (index > elSliderItem.length){
-    index = 1
-  }    
-  if (index < 1) {
-    index = elSliderItem.length
-  }
-  for (i = 0; i < elSliderItem.length; i++) {
-    elSliderItem[i].style.display = "none";  
-  }
-  elSliderItem[index-1].style.display = "block"; 
-}   
-
-console.log(elSliderItem);
-
-function nextSlide(){
-  mySlides(index -= 1);
-}
-function prevSlide(){
-  mySlides(index += 1);
-}
-
-let savedList = document.getElementById('savedList');
-
-function savePost(id){
-let savePostBtn = document.getElementById('savePostBtn');
-savePostBtn.innerHTML= `<i class='bx bxs-bookmark' ></i>`
-  posts.forEach((item)=>{
-  
-    if(item.id==id){
+    function savePost(id){
       savedList.innerHTML='';
-      item.save=true;
-   let filtered= posts.filter((el)=>{
-      return el.save==true
-    })
-    showPosts(savedList,filtered);
+      let savePostBtn = document.getElementById('savePostBtn');
+      posts.forEach((item)=>{
+        if(item.id==id){
+        if(item.save==true){
+          item.save=false;
+          savePostBtn.innerHTML = `<i class='bx bx-bookmark' ></i>`
+        }
+        else if(item.save==false){
+          item.save=true;
+          savePostBtn.innerHTML = `<i class='bx bxs-bookmark'></i>`
+        }
+        }
+      })
+      let savedArr = posts.filter((item)=>{
+        return item.save==true;
+      })
+      showPosts(savedList,savedArr);
     }
-  })
-}
+
+    let videoList = document.getElementById('videoList');
+    let videoArr = posts.filter((item)=>{
+      return item.type=='video'
+    })
+    showPosts(videoList,videoArr);
+

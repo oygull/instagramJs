@@ -27,17 +27,32 @@
         <input class="header__input" type="text" placeholder="Search">
       </form>
       <div class="header__btns">
-        <button class="header__btn btn-home"><i class='bx bx-home'></i></button>
-        <button class="header__btn btn-message"><i class='bx bx-message-square-dots' ></i></button>
-        <button class="header__btn btn-plus"><i class='bx bx-plus-circle' ></i></button>
-        <button class="header__btn btn-compass"><i class='bx bx-compass' ></i></button>
-        <button class="header__btn btn-like"><i class='bx bx-heart' ></i></button>
+        <button class="header__btn btn-home"><img src="images/home.svg" alt="home"></button>
+        <button class="header__btn btn-message"><img src="images/message.svg" alt="direct"></button>
+        <button class="header__btn btn-plus"><img src="images/plus.svg" alt="plus"></button>
+        <button class="header__btn btn-compass"><img src="images/compass.svg" alt="compass"></button>
+        <button class="header__btn btn-like"><img src="images/like.svg" alt="like"></button>
         <button class="header__btn btn-user"><img class="myself" src="images/myself.jpg" alt="myself"></button>
       </div>
      </div>
    </div>
  </header>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-header">
+      <div class="modal-body header-modal">
+        <p class="header__modal-item">Block</p>
+        <p class="header__modal-item">Restrict</p>
+        <p class="header__modal-item">Report</p>
+        <p class="header__modal-item">Cancel</p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
  <div class="user">
    <div class="container">
      <div class="user__inner row">
@@ -49,7 +64,7 @@
           <p class="user__name-info">elle <i class='bx bxs-badge-check'></i></p>
           <button class="user-top-btn follow-btn">Follow</button>
           <button class="user-top-btn usercheck-btn"><i class='bx bx-chevron-down' ></i></button>
-          <button class="dots-btn"><i class='bx bx-dots-horizontal-rounded' ></i></button>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1" class="dots-btn"><i class='bx bx-dots-horizontal-rounded' ></i></button>
         </div>
         <div class="indicators">
           <p class="indicators__text"> <span>145</span> posts</p>
@@ -64,6 +79,38 @@
      </div>
    </div>
  </div>
+
+ <div class="stories">
+   <div class="container">
+    <ul class="stories__list row">
+      <li class="stories__item col-xs-3 col-sm-2">
+        <img class="story-img" src="images/strory1.jpeg" alt="story">
+        <p class="story__text">You Tube 🔥</p>
+      </li>
+      <li class="stories__item col-xs-3 col-sm-2">
+        <img class="story-img" src="images/story2.jpeg" alt="story">
+        <p class="story__text">Silly Juice 💙</p>
+      </li>
+      <li class="stories__item col-xs-3 col-sm-2">
+        <img class="story-img" src="images/story3.jpeg" alt="story">
+        <p class="story__text">Family 💗</p>
+      </li>
+      <li class="stories__item col-xs-3 col-sm-2">
+        <img class="story-img" src="images/story4.jpeg" alt="story">
+        <p class="story__text">Things i love ❤️</p>
+      </li>
+      <li class="stories__item col-xs-3 col-sm-2">
+        <img class="story-img" src="images/story5.jpeg" alt="story">
+        <p class="story__text">Home 💛</p>
+      </li>
+      <li class="stories__item col-xs-3 col-sm-2">
+        <img class="story-img" src="images/story6.jpeg" alt="story">
+        <p class="story__text">Travel 💚</p>
+      </li>
+    </ul>
+   </div>
+ </div>
+
  <section  class="posts">
    <div class="container">
      <div class="posts__inner">
@@ -87,7 +134,11 @@
         <ul id="postsList" class="posts__list row"></ul>
        </div>
     </div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="container">
+        <ul class="posts__list row" id="videoList"></ul>
+      </div>
+    </div>
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
       <div class="container">
         <ul id="savedList" class="posts__list row"></ul>
@@ -97,6 +148,7 @@
  </section>
 
 
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
@@ -104,6 +156,10 @@
     </div>
   </div>
 </div>
+
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

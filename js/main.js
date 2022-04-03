@@ -272,7 +272,7 @@ function openModal(id){
         modalContent.innerHTML = `
         <div class="modal__imgbox col-md-6 col-xs-12">
         <ul id="postSlider" class="post-slider">
-            <li class="imgbox"><img src="${item.mediaUrl[2]}" class="post-slider" alt="post-slider"></li>
+            <li  class="imgbox"><img src="${item.mediaUrl[2]}" class="post-slider" alt="post-slider"></li>
             <li class="imgbox"><img src="${item.mediaUrl[1]}"  class="post-slider"  alt="post-slider"></li>
             <li class="imgbox"><img src="${item.mediaUrl[0]}"  class="post-slider"  alt="post-slider"></li>
          </ul>
@@ -326,6 +326,10 @@ function openModal(id){
         }
       })
 
+    }
+
+    function myFunction(id){
+      console.log(id);
     }
 
     let elSliderItem = document.getElementsByClassName("imgbox");
